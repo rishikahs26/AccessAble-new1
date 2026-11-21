@@ -19,9 +19,9 @@ services:
 
     # Install both frontend and backend dependencies, then build React
     buildCommand: |
-      npm install &&
+      npm ci &&
       npm run build &&
-      cd backend && npm install
+      cd backend && npm ci
 
     # Start the Express server (serves built React + API)
     startCommand: cd backend && node server.js
